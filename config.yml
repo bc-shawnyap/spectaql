@@ -1,0 +1,24 @@
+spectaql:
+  faviconFile: https://www.bigcommerce.com/assets/images/favicons/favicon-96x96.png
+  themeDir: src/themes/bigcommerce
+
+info:
+  ##############################################
+  # Introduction area flags
+  #
+  x-hidePoweredBy: true
+  # Set to true to do no Introduction area rendering at all. Supersedes the below options
+  # Default: false
+  x-hideIntroduction: true
+  # Set to true to not render a friendly Welcome section based on the description in this area
+  # Default: false
+  x-hideWelcome: false
+  # Set to true to not render your intro items
+  # Default: false
+  x-hideIntroItems: false
+
+  title: Storefront GraphQL API Reference
+  description: Storefront GraphQL API Reference
+
+introspection:
+  url: https://us-central1-bc-prototypes-njb.cloudfunctions.net/get-graphql-schema-storefront
