@@ -1,0 +1,22 @@
+$devCenterPrimaryColor: #4d34c6;
+
+.bc-header {
+  position: sticky;
+  top: 0;
+  background-color: $devCenterPrimaryColor;
+  height: $sidebar-top;
+  width: 100%;
+  z-index: 11;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding-left: $container-padding-desktop;
+    padding-right: $container-padding-desktop;
+  }
+
+  & * {
+    height: 100%;
+  }
+}

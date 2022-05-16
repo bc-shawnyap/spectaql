@@ -1,0 +1,57 @@
+@import 'variables';
+@import 'header';
+
+@mixin global-font() {
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+}
+
+#spectaql {
+  pre {
+    color: $text-color-code-block;
+    border-radius: $border-radius;
+    code {
+      background: $background-code-block;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #404040;
+      box-shadow: 0 0 200px rgb(0 0 0 / 33%) inset;
+    }
+  }
+
+  #mobile-navbar {
+    top: $sidebar-top !important;
+  }
+}
+
+#nav {
+  overscroll-behavior: contain;
+  top: $sidebar-top !important;
+
+  @media (max-width: $size-tablet) {
+    $mobile-nav-height: 38px;
+    max-height: calc(
+      100vh - #{$sidebar-top} - #{$mobile-nav-height}
+    ) !important;
+  }
+}
+
+#content * {
+  scroll-margin-top: $sidebar-top;
+
+  @media (max-width: $size-tablet) {
+    $mobile-nav-height: 55px;
+    scroll-margin-top: calc($sidebar-top + $mobile-nav-height);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  &-thumb {
+    background: #d3d5d5;
+  }
+}
+
+::selection {
+  background-color: #cce2ff;
+  color: rgba(0, 0, 0, 0.87);
+}
